@@ -1,0 +1,13 @@
+.mainContainer {
+	background-image: url("http://localhost:8000/images/johnny1.jpg");
+	background-position: center; 
+  	background-repeat: no-repeat; 
+ 	background-size: cover;
+ 	text-align: left;
+ 	padding-top: 20vh;
+ 	padding-left: 5vw;
+ 	padding-right: 1vw;
+	height:94.11vh;
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 30px;
+}

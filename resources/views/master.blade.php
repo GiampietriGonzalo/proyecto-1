@@ -2,14 +2,14 @@
 <html lang="en">
 	
 	<head>
-		<title>Proyecto IAW</title>
+		<title>@yield('title')</title>
 
 		<meta charset="utf-8">
  		<meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!--------------===============----------------CSS STYLES----------------------------------------------------------------->
-    <link rel="stylesheet" type="text/css" href="src/common.css">
-    <link rel="stylesheet" type="text/css" href="src/indexStyle.css">
+    @yield('css')
+
  		<!----------------------------------------------BOOTSTRAP FRAMEWORK BEGIN-------------------------------------------------->
 
  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -19,53 +19,32 @@
 
 		<!----------------------------------------------BOOTSTRAP FRAMEWORK END-------------------------------------------------->
 	</head>
-
-	<body>
-		
+	
+	<body style="background-color: rgb(43,48,54)">
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   			<ul class="navbar-nav">
    				 <li class="nav-item active">
-     				 <a class="nav-link" href="#">Home</a>
+     				 <a class="nav-link" href="/index">Home</a>
    				 </li>
    				<li class="nav-item">
       				<a class="nav-link" href="#">Explore</a>
    				</li>
     			<li class="nav-item">
-     				<a class="nav-link" href="signIn.html">Sign In</a>
+     				<a class="nav-link" href="/signIn">Sign In</a>
     			</li>
     			<li class="nav-item">
-      				<a class="nav-link " href="signUp.html">Sign Up</a>
+      				<a class="nav-link" href="/signUp">Sign Up</a>
     			</li>
     			<li class="nav-item">
-      				<a class="nav-link " href="#">About</a>
+      				<a class="nav-link" href="#">About</a>
     			</li>
-    			<li class="nav-item">
-      				<a class="nav-link " href="profile.html">Profile</a>
-    			</li>
+          <li class="nav-item">
+              <a class="nav-link" href="/profile">Profile</a>
+          </li>
  			 </ul>
 		</nav>
 
+    @yield('content')
 
-
-		<div class="mainContainer">
-		
-			 <div class="row">
-  				<div class="col">
-  					Watch the best playlists HERE!<br>
-					Everyone uploads their favourite tracks.<br>
-					Dylan arreglá la cama de Henry. <br>
-					Just for <b>YOU!</b>
-  				</div>
-  				<div class="col"></div>
-  				<div class="col">Watch the best playlists HERE!<br>
-					Everyone uploads their favourite tracks.<br>
-					Dylan arreglá la cama de Henry. <br>
-					Just for <b>YOU!</b></div>
-			</div> 
-
-			
-		</div>
-
-	</body>
-
+  </body>
 </html>

@@ -1,55 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-	
-	<head>
-		<title>Proyecto IAW</title>
+@extends('master')
 
-		<meta charset="utf-8">
- 		<meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!--------------===============----------------CSS STYLES----------------------------------------------------------------->
-    <link rel="stylesheet" type="text/css" href="src/common.css">
-    <link rel="stylesheet" type="text/css" href="src/profileStyle.css">
+@section('title')
+  My profile!
+@endsection
 
- 		<!----------------------------------------------BOOTSTRAP FRAMEWORK BEGIN-------------------------------------------------->
+@section('css')
+  <link href="{{ URL::asset('css/common.css') }}" rel="stylesheet">
+  <link href="{{ URL::asset('css/profileStyle.css') }}" rel="stylesheet">
+@endsection
 
- 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
- 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-		<!----------------------------------------------BOOTSTRAP FRAMEWORK END-------------------------------------------------->
-	</head>
-	
-	<body style="background-color: rgb(43,48,54)">
-		
-		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  			<ul class="navbar-nav">
-   				 <li class="nav-item active">
-     				 <a class="nav-link" href="index.html">Home</a>
-   				 </li>
-   				<li class="nav-item">
-      				<a class="nav-link" href="#">Explore</a>
-   				</li>
-    			<li class="nav-item">
-     				<a class="nav-link disabled" href="signIn.html">Sign In</a>
-    			</li>
-    			<li class="nav-item">
-      				<a class="nav-link disabled" href="#">Sign Up</a>
-    			</li>
-    			<li class="nav-item">
-      				<a class="nav-link " href="#">About</a>
-    			</li>
-          <li class="nav-item">
-              <a class="nav-link " href="profile.html">Profile</a>
-          </li>
- 			 </ul>
-		</nav>
+@section('content')
 
 		<div class="row" style="width: 100%">
   			<div class="column" style="bottom-margin:2vh; width: 21%;">
   				<div class="card" style="background-color: rgb(54,59,64);">
- 					  <img class="card-img-top" src="src/img/Joey.jpg" alt="Card image">
+ 					  <img class="card-img-top" src="url(http://localhost:8000/images/Joey.jpg)" alt="Card image">
   				 	  <div class="card-body">
     				  	<h4 class="card-title">Joey Ramone</h4>
    					  	<p class="card-text">Ramones's vocalist.</p>
@@ -116,6 +81,4 @@
         </div>
 		</div>
 
-	</body>
-
-</html>
+@endsection
