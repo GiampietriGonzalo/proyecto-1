@@ -6,6 +6,10 @@ body {
 	background-color: rgb(43,48,54);
 }
 
+hr {
+	background-color: white;
+}
+
 /*
 	Home
 	profile
