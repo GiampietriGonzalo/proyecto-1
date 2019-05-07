@@ -30,10 +30,10 @@
       				<a class="nav-link" href="#">Explore</a>
    				</li>
     			<li class="nav-item">
-     				<a class="nav-link" href="/signIn">Sign In</a>
+     				<a class="nav-link" href="/login">Sign In</a>
     			</li>
     			<li class="nav-item">
-      				<a class="nav-link" href="/signUp">Sign Up</a>
+      				<a class="nav-link" href="/register">Sign Up</a>
     			</li>
     			<li class="nav-item">
       				<a class="nav-link" href="#">About</a>

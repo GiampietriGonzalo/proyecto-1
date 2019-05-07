@@ -3,19 +3,18 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\User;
+use App\User
+use App\Song
 
-class PostsList extends Model
-{
-    protected $table = 'postsList';
+class SongList extends Model{
+    protected $table = 'list';
     public $primaryKey = 'id';
 
     public function user(){
         return $this->belongsTo('App\User');
     }
 
-    public function posts(){
-        return $this->hasMany('App\Post');
+    public function items(){
+        return $this->hasMany('App\Song');
     }
-
 }

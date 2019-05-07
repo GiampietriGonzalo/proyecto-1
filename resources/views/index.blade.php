@@ -10,9 +10,9 @@
 @endsection
 
 @section('content')
-
-		<div class="mainContainer">
 		
+		<div class="mainContainer">
+			
 			 <div class="row">
   				<div class="col">
   					Watch the best playlists HERE!<br>

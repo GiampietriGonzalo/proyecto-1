@@ -12,7 +12,10 @@
 */
 Route::get('/', 'PagesController@goToHome');
 Route::get('/index', 'PagesController@goToHome');
-Route::get('/signIn', 'PagesController@goToSignIn');
-Route::get('/signUp', 'PagesController@goToSignUp');
+Route::get('/login', 'PagesController@goToLogin');
+Route::get('/register', 'PagesController@goToSignUp');
 Route::get('/explore', 'PagesController@goToExplore');
 Route::get('/profile', 'PagesController@goToProfile');
+
+Auth::routes();
+

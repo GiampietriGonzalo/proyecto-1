@@ -11,11 +11,11 @@ class PagesController extends Controller{
     }
 
     public function goToSignIn(){
-    	return view('signIn');
+    	return view('login');
     }
 
     public function goToSignUp(){
-    	return view('signUp');
+    	return view('register');
     }
 
     public function goToProfile(){
@@ -25,4 +25,9 @@ class PagesController extends Controller{
     public function goToExplore(){
     	return view('explore');
     }
+
+    public function goToLogin(){
+        return view('login');
+    }
+
 }

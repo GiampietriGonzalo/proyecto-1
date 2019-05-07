@@ -3,9 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User
 
-class Profile extends Model
-{
+class userProfile extends Model{
     public $primaryKey = 'id';
     public $name = 'name';
     public $username = 'username';
