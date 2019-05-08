@@ -9,6 +9,8 @@ class CreateUserlistsTable extends Migration{
     public function up(){
         Schema::create('userlists', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->$table->unsignedInteger('listId');
+            $table->$table->unsignedInteger('userId');
             $table->timestamps();
         });
     }

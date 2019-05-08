@@ -14,10 +14,11 @@
 		<div class="row" style="width: 100%">
   			<div class="column" style="bottom-margin:2vh; width: 21%;">
   				<div class="card" style="background-color: rgb(54,59,64);">
- 					  <img class="card-img-top" src="url(http://localhost:8000/images/Joey.jpg)" alt="Card image">
+ 					  <img class="card-img-top" src="url('../images/joey.jpg')" alt="Card image">
   				 	  <div class="card-body">
-    				  	<h4 class="card-title">Joey Ramone</h4>
-   					  	<p class="card-text">Ramones's vocalist.</p>
+    				  	<h4 class="card-title">{{$userProfile->username}}</h4>
+                <h3 class="card-title">{{$userProfile->email}}</h3>
+   					  	<p class="card-text">Email: {{$userProfile->email}}</p>
   				  	</div>
   				</div>
   			</div>

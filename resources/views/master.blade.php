@@ -27,7 +27,7 @@
      				 <a class="nav-link" href="/index">Home</a>
    				 </li>
    				<li class="nav-item">
-      				<a class="nav-link" href="#">Explore</a>
+      				<a class="nav-link" href="/explore">Explore</a>
    				</li>
     			<li class="nav-item">
      				<a class="nav-link" href="/login">Sign In</a>

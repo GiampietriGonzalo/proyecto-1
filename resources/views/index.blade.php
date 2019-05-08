@@ -11,7 +11,7 @@
 
 @section('content')
 		
-		<div class="mainContainer">
+		<div class="mainContainer" style="background-image: url(../images/johnny1.jpg);">
 			
 			 <div class="row">
   				<div class="col">
