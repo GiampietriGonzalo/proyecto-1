@@ -5,17 +5,17 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 class CreateUserlistsTable extends Migration{
-   
+
     public function up(){
-        Schema::create('userlists', function (Blueprint $table) {
+        Schema::create('lists', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('listId');
-            $table->unsignedInteger('userId');
+            $table->integer('user_id');
+            $table->string('name');
             $table->timestamps();
         });
     }
 
     public function down(){
-        Schema::dropIfExists('userlists');
+        Schema::dropIfExists('lists');
     }
 }
