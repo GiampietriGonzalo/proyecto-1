@@ -16,25 +16,18 @@
    			<hr>
    			
    			$lists = DB::table('lists')->get();
-   			$userlist = DB:table('userLists')->get();
 
     		@if(count($lists) > 0)
-       			@foreach($lists as $list)
-       				@if(count($userlists) > 0)
-	       				@foreach($userlists as $userlist)
-	       					@if($list->id == $userlist->listId)
-			            		<div class="row">
-			                 		<div class="column" style="padding-left: 1.5vw; padding-right: 1.5vw; width: 30vw;">
-			                    		<h3><a href="/songList/{{$list->id}}">{{$list->name}}</a></h3>
-			                 		</div>
-			                  		<div class="column" style="padding-left: 1.5vw; padding-right: 1.5vw; width: 10vw;">
-			                    		Owner: DB::table('users')->where('id', $userlist->id)->value('name');
-			                 	 	</div>
-			                	</div>
-		                	@endif
-	                	@endforeach
-                	@endif
-        		@endforeach
+       			@foreach($lists as list)
+	       			<div class="row">
+			        	<div class="column" style="padding-left: 1.5vw; padding-right: 1.5vw; width: 30vw;">
+			        		<h3><a href="/songList/{{$list->id}}">{{$list->name}}</a></h3>
+			            </div>
+			        	<div class="column" style="padding-left: 1.5vw; padding-right: 1.5vw; width: 10vw;">
+			                Owner: DB::table('users')->where('id', $list->user_id)->value('name');
+			            </div>
+			        </div>
+	            @endforeach
     		@else
         		<p>No lists found</p>
     		@endif
