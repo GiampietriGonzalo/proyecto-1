@@ -16,10 +16,7 @@ Route::get('/login', 'PagesController@goToLogin');
 Route::get('/register', 'PagesController@goToSignUp');
 Route::get('/explore', 'PagesController@goToExplore');
 Route::get('/profile', 'PagesController@goToProfile');
-
+Route::post('/login', 'Auth\LoginController@login')->name('login');
+Route::post('/register', 'Auth\RegisterController@register')->name('register');
 Auth::routes();
-
-
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');

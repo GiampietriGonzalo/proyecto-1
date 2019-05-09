@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-	
+
 	<head>
 		<title>@yield('title')</title>
 
 		<meta charset="utf-8">
  		<meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!--------------===============----------------CSS STYLES----------------------------------------------------------------->
     @yield('css')
 
@@ -19,28 +19,41 @@
 
 		<!----------------------------------------------BOOTSTRAP FRAMEWORK END-------------------------------------------------->
 	</head>
-	
+
 	<body style="background-color: rgb(43,48,54)">
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   			<ul class="navbar-nav">
+
    				 <li class="nav-item active">
      				 <a class="nav-link" href="/index">Home</a>
    				 </li>
    				<li class="nav-item">
       				<a class="nav-link" href="/explore">Explore</a>
-   				</li>
+                   </li>
+                @guest
     			<li class="nav-item">
      				<a class="nav-link" href="/login">Sign In</a>
     			</li>
     			<li class="nav-item">
       				<a class="nav-link" href="/register">Sign Up</a>
-    			</li>
+                </li>
+                @endguest
     			<li class="nav-item">
       				<a class="nav-link" href="#">About</a>
-    			</li>
-          <li class="nav-item">
-              <a class="nav-link" href="/profile">Profile</a>
-          </li>
+                </li>
+                @auth
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile">Profile</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                </li>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+                @endauth
  			 </ul>
 		</nav>
 

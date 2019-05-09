@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Song;
+use App\UserList;
 
 class PagesController extends Controller{
-    
+
     public function goToHome(){
     	return view('index');
     }
@@ -23,7 +25,8 @@ class PagesController extends Controller{
     }
 
     public function goToExplore(){
-    	return view('explore');
+        $lists = UserList::all();
+    	return view('explore')->with(['lists' => $lists]);
     }
 
     public function goToLogin(){
