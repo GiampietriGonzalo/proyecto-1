@@ -7,6 +7,7 @@ use App\User
 use App\Song
 
 class SongList extends Model{
+	
     protected $table = 'list';
     public $primaryKey = 'id';
 

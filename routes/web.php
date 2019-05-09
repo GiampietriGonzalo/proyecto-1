@@ -19,3 +19,7 @@ Route::get('/profile', 'PagesController@goToProfile');
 
 Auth::routes();
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

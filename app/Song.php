@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\SongList
 
 class Song extends Model{
+
     protected $table = 'song';
     public $primaryKey = 'id';
     public $duration = 'duration'

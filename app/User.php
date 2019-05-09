@@ -9,6 +9,14 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable{
     use Notifiable;
 
+    public $primaryKey = 'id';
+    public $name = 'name';
+    public $email = 'email';
+
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
+
     protected $fillable = [
         'name', 'email', 'password',
     ];
