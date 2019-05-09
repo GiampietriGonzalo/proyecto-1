@@ -7,7 +7,7 @@ class songTableSeeder extends Seeder{
         for ($i = 0; $i <= 3; $i++){
 	        DB::table('song')->insert([
 	            'name' => Str::random(10),
-	            'duration' => Int::random(5)
+	            'duration' => mt_rand(0,9)
 	        ]);
     	}
     }

@@ -5,16 +5,16 @@ use Illuminate\Database\Seeder;
 class userListsTableSeeder extends Seeder{
 
     public function run(){
-    	if(count($list)>0 && count($users)>0){
-    		foreach($userlists as userlist){
-    			$userIndex = Int::Random(count($users));
-    			$user = DB::table('users')->find(userIndex);
+        $lists = DB::table('lists')->get();
+        $users = DB::table('users')->get();
+    	if(count($lists)>0 && count($users)>0){
+    		foreach($lists as $list){
+    			$user = DB::table('users')->first();
 		        DB::table('userLists')->insert([
-		            'listId' => $userlist->id,
+		            'listId' => $list->id,
 		            'userId' => $user->id
 		        ]);
 	    	}
     	}
     }
-
 }
